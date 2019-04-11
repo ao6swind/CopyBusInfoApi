@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DbContexts.Migrations
 {
     [DbContext(typeof(DbEasyLife))]
-    [Migration("20190411081250_Init")]
+    [Migration("20190411094528_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -28,6 +28,29 @@ namespace DbContexts.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Routes");
+                });
+
+            modelBuilder.Entity("Models.Stop", b =>
+                {
+                    b.Property<int>("Id");
+
+                    b.Property<string>("Address");
+
+                    b.Property<int>("GoBack");
+
+                    b.Property<float>("Latitude");
+
+                    b.Property<float>("Longitude");
+
+                    b.Property<string>("Name");
+
+                    b.Property<int>("Number");
+
+                    b.Property<string>("RouteId");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Stops");
                 });
 #pragma warning restore 612, 618
         }

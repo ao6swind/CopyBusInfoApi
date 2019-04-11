@@ -27,6 +27,29 @@ namespace DbContexts.Migrations
 
                     b.ToTable("Routes");
                 });
+
+            modelBuilder.Entity("Models.Stop", b =>
+                {
+                    b.Property<int>("Id");
+
+                    b.Property<string>("Address");
+
+                    b.Property<int>("GoBack");
+
+                    b.Property<float>("Latitude");
+
+                    b.Property<float>("Longitude");
+
+                    b.Property<string>("Name");
+
+                    b.Property<int>("Number");
+
+                    b.Property<string>("RouteId");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Stops");
+                });
 #pragma warning restore 612, 618
         }
     }

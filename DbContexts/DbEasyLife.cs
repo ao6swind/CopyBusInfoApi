@@ -14,6 +14,7 @@ namespace DbContexts
         }
 
         public virtual DbSet<Route> Routes {get; set;}
+        public virtual DbSet<Stop> Stops {get; set;}
 
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {

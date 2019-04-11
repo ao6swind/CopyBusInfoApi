@@ -64,7 +64,8 @@ namespace Repositories.Dapper
                 }
             }
 
-            string sql = "SELECT * FROM {table} WHERE {key} = @id";
+            string sql = $"SELECT * FROM {table} WHERE {key} = @id";
+            Console.WriteLine(sql);
             using(MySqlConnection conn = new MySqlConnection(DbConnectionString.DbEasyLife))
             {
                 conn.Open();
