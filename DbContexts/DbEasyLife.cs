@@ -17,8 +17,7 @@ namespace DbContexts
 
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
-            string connection = "server=localhost;database=DbEasyLife;user=AppEasyLife;password=IloveTaiwan@2019";
-            builder.UseMySQL(connection);
+            builder.UseMySQL(DbConnectionString.DbEasyLife);
         }
     }
 }

@@ -17,12 +17,9 @@ namespace DbContexts.Migrations
 
             modelBuilder.Entity("Models.Route", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
+                    b.Property<int>("Id");
 
                     b.Property<string>("Name");
-
-                    b.Property<int>("PathAttrivuteId");
 
                     b.Property<string>("ProviderName");
 

@@ -10,11 +10,9 @@ namespace DbContexts.Migrations
                 name: "Routes",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("MySQL:AutoIncrement", true),
+                    Id = table.Column<int>(nullable: false),
                     Name = table.Column<string>(nullable: true),
-                    ProviderName = table.Column<string>(nullable: true),
-                    PathAttrivuteId = table.Column<int>(nullable: false)
+                    ProviderName = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

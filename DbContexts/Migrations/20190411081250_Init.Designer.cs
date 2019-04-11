@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DbContexts.Migrations
 {
     [DbContext(typeof(DbEasyLife))]
-    [Migration("20190411031827_Init")]
+    [Migration("20190411081250_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -19,12 +19,9 @@ namespace DbContexts.Migrations
 
             modelBuilder.Entity("Models.Route", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
+                    b.Property<int>("Id");
 
                     b.Property<string>("Name");
-
-                    b.Property<int>("PathAttrivuteId");
 
                     b.Property<string>("ProviderName");
 
